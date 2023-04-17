@@ -1,0 +1,99 @@
+@import "../components/Humidity/Humidity.less";
+@import "../components/Weather/Weather.less";
+@import "../components/Location/Location.less";
+@import "../components/Graph/Graph.less";
+
+@nice-blue: #5b83ad;
+@gray-color1: #666666;
+@black-color1: #191b1f;
+@text-color: #ffffff;
+body {
+  background-color: @gray-color1;
+  height: 100vh;
+  font-family: Verdana, Arial, Tahoma, Serif, Arial, sans-serif;
+  font-size: 0.9rem;
+}
+#root {
+  display: flex;
+  justify-content: center;
+}
+
+.appContainer {
+  text-align: center;
+  margin: 50px;
+  background-color: @black-color1;
+  color: @text-color;
+  padding: 20px;
+  border-radius: 28px;
+}
+
+/* Style the input container */
+.search-container {
+  float: right;
+}
+
+/* Style the input field inside the navbar */
+input[type="text"] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+/* Style the button inside the input container */
+.search-container button {
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.search-container button:hover {
+  background: #ccc;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid blue;
+  border-bottom: 16px solid blue;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.location-notavailable {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-loader {
+  // height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+}

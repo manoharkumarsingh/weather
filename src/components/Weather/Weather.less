@@ -1,0 +1,64 @@
+.weatherSection {
+  display: flex;
+  // gap: 30px;
+  border-radius: 20px;
+  // background: #3c3f52;
+  // background-image: url("paper.gif");
+  // background-image: url("/resources/background-image.jpg");
+  padding: 20px;
+  img {
+    width: 30px;
+    height: 30px;
+  }
+  /**RightSection**/
+  .deatilsContainer {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    .headerSection {
+      display: flex;
+      justify-content: center;
+      .pagination {
+        ul {
+          list-style-type: none;
+          display: flex;
+          gap: 10px;
+          margin: unset;
+          padding: unset;
+          flex-wrap: wrap;
+        }
+
+        li a {
+          padding: 5px;
+          text-decoration: none;
+          cursor: pointer;
+          border-radius: 50%;
+        }
+        li.selected a {
+          background-color: dodgerblue;
+          color: white;
+        }
+        li a:hover:not(.selected) {
+          background-color: #ddd;
+        }
+        .disabled a {
+          background-color: #ddd;
+        }
+      }
+    }
+    .hourSection {
+      display: flex;
+      gap: 26px;
+      margin-top: 20px;
+      justify-content: center;
+      .temp {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .weather-deatils {
+    display: flex;
+    flex-direction: column;
+  }
+}
